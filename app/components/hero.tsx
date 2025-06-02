@@ -126,7 +126,7 @@ const Hero = () => {
   });
   return (
     <>
-      <div className=" relative w-full">
+      <div className=" relative overflow-x-clip w-full">
         <div className=" absolute top-0  flex gap-[2rem]  translate-x-[-50%] left-[50%] h-full  w-[100%]">
           <div className="  w-full absolute z-[10] h-[50%]">
             <Image
@@ -190,7 +190,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="md:h-[100vh] md:mt-0 my-[3rem]  md:sticky  w-[90%] md:w-[20%]  left-[50%] md:translate-x-[-50%] top-0 z-[80] ">
+          <div className="md:h-[100vh] md:mt-0 my-[3rem]  md:sticky  w-[80%] md:w-[20%]  left-[50%] md:translate-x-[-50%] top-0 z-[80] ">
             <div
               style={{
                 transition: ` 0.4s ease-out`,
@@ -208,9 +208,13 @@ const Hero = () => {
                     : finalScale
                 })`, // ← just
               }}
-              className="md:absolute md:top-[50%]  w-full"
+              className="md:absolute   md:rounded-[50px] md:top-[50%]  w-full"
             >
-              <Image src={phone} alt="phone" className="   w-full" />
+              <Image
+                src={phone}
+                alt="phone"
+                className=" md:shadow-2xl md:rounded-[50px] md:shadow-black w-full"
+              />
             </div>
           </div>
 
@@ -349,7 +353,9 @@ const Hero = () => {
           </div>
 
           {/* element spacing on here  */}
-          <div className="h-[40rem] md:block hidden  w-full z-[10]"></div>
+          <div className="h-[40rem] md:block hidden w-full z-[10]">
+            {/* What <br /> Makes <br /> SUUVO <br /> Unique? */}
+          </div>
 
           {/* insert it here  */}
           <div className=" w-full grid md:grid-cols-3 z-[10] md:max-w-[95%]  md:gap-0 gap-[1.5rem] mx-auto md:mt-[5rem]">
