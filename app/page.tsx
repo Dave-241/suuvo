@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/footer";
 import PhoneBanner from "./components/phoneBanner";
 import Topfeatures from "./components/TopFeatures";
+import SomethingNewIsComing from "./components/SomethingNewIsComing";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Topfeatures />
       <PhoneBanner />
+      <SomethingNewIsComing />
       <Footer />
     </>
   );
