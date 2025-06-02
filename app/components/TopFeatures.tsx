@@ -105,7 +105,7 @@ const Topfeatures = () => {
             <div
               key={index}
               style={{ backgroundColor: e.bg, color: e.text }}
-              className=" md:w-[25rem] w-[80%] snap-center gap-[2rem] flex justify-between  flex-col overflow-hidden shrink-0 rounded-[30px] md:rounded-[40px] "
+              className=" md:w-[25rem] w-[90%] snap-center gap-[2rem] flex justify-between  flex-col overflow-hidden shrink-0 rounded-[30px] md:rounded-[40px] "
             >
               <div className="flex flex-col px-[7%] pt-[7%] gap-[1.5rem]">
                 <div className="flex justify-between items-center">
