@@ -68,7 +68,7 @@ const PhoneBanner = () => {
           ref={img_scale}
           className=" absolute bg-[#FFC6E2] w-full md:w-[25rem] rounded-[20px] overflow-hidden h-full"
         ></div>
-        <div className="flex flex-col w-full items-center py-[5rem] z-[10] text-center gap-[2rem]">
+        <div className="flex flex-col w-full items-center py-[3rem] md:py-[5rem] z-[10] text-center gap-[2rem]">
           <h2
             className={`${Sf_pro_bold.className} text-[#5F002F] text-lg md:text-2xl`}
           >
