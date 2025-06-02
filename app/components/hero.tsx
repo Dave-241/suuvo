@@ -26,15 +26,15 @@ const Hero = () => {
           className={` z-[10] items-center flex flex-col gap-[1rem] text-center ${Sf_pro_medium.className}`}
         >
           <h1
-            className={`text-center md:text-[80px] md:leading-[120%] z-[10]  `}
+            className={`text-center text-[45px] leading-[120%] md:text-[80px] md:leading-[120%] z-[10]  `}
           >
             The Future of <br /> Social Media
           </h1>
-          <p className="">
+          <p className=" md:px-0 px-[10%]">
             {" "}
             A new way to connect, create, and engage. Experience a social media
-            platform that <br /> goes beyond likes—built for real connections,
-            privacy, and engagement.
+            platform that <br className="md:block hidden" /> goes beyond
+            likes—built for real connections, privacy, and engagement.
           </p>
           <ButtonCtn />
         </div>

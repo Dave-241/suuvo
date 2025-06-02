@@ -13,10 +13,10 @@ const Nav = () => {
   return (
     <>
       <nav
-        className={`${Sf_pro_medium.className} left-[50%] translate-x-[-50%] bg-white/60 p-[0.3rem] backdrop-blur-md fixed justify-between flex  top-[1rem] z-[100]  mx-auto md:w-[120rem] pl-[2rem] max-w-[90%] items-center rounded-full`}
+        className={`${Sf_pro_medium.className} left-[50%] translate-x-[-50%] bg-white/70 md:p-[0.3rem] backdrop-blur-md fixed justify-between flex  top-[1rem] z-[100]  mx-auto md:w-[120rem] md:pl-[2rem] p-[2%] pl-[3%] w-full max-w-[94%] md:max-w-[90%] items-center rounded-full`}
       >
         <Image src={logo} alt="logo" className="w-[8rem] " />
-        <div className="flex absolute left-[50%] translate-x-[-50%] gap-[3rem]">
+        <div className="hidden absolute md:flex left-[50%] translate-x-[-50%] gap-[3rem]">
           {" "}
           {navItems.map((item) => (
             <a
