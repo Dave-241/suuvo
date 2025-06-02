@@ -97,7 +97,7 @@ const Topfeatures = () => {
       </h2>
       <div
         ref={scrollRef}
-        className=" scroll-hidden z-[40] w-full md:w-[80rem] snap-x snap-mandatory md:max-w-[90%] gap-[1rem] md:px-0 px-[3%] md:gap-[2rem] flex overflow-x-auto "
+        className=" scroll-hidden z-[40] w-full md:w-[80rem] snap-x snap-mandatory md:max-w-full lg:max-w-[90%] gap-[1rem] md:px-0 px-[3%] md:gap-[2rem] flex overflow-x-auto "
       >
         <div className="md:w-[25rem] w-[80%] shrink-0 "></div>
         {features.map((e, index) => {

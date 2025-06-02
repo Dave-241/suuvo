@@ -140,7 +140,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="aspect-[1/0.45] md:aspect-[1/0.21]"></div>
+      <div className="aspect-[1/0.3] md:aspect-[1/0.21]"></div>
 
       <div className=" absolute  w-full md:w-[120rem] max-w-full left-[50%] translate-x-[-50%] bottom-0">
         <Image

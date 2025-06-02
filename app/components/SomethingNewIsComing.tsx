@@ -126,7 +126,7 @@ const SomethingNewIsComing = () => {
         <div className="flex-col  mb-[2rem] items-center lg:mb-[-20vh] flex gap-5 md:gap-8">
           {" "}
           <h2
-            className={`${Sf_pro_bold.className} text-center text-black/20 text-6xl md:text-[130px] md:leading-[75%]`}
+            className={`${Sf_pro_bold.className} text-center text-black/20 text-[60px] leading-[80%] md:text-[130px] md:leading-[75%]`}
           >
             Something <br /> new is <br /> coming
           </h2>
@@ -137,7 +137,7 @@ const SomethingNewIsComing = () => {
           <div className="w-full lg:sticky top-0 lg:h-[100vh] left-0 ">
             <div
               ref={scrollRef}
-              className="flex w-full snap-mandatory snap-x lg:overflow-hidden overflow-x-auto  h-full items-center gap-[0.5rem] lg:gap-[1%] lg:px-0 md:px-[0.5rem] px-[0.5rem] "
+              className="flex w-full snap-mandatory snap-x lg:overflow-hidden overflow-x-auto  h-full items-center gap-[0.8rem] lg:gap-[1%] lg:px-0 md:px-[0.5rem] px-[0.8rem] "
             >
               {creators.map((e, i) => {
                 return (
@@ -155,7 +155,7 @@ const SomethingNewIsComing = () => {
                     // style={isLargeScreen ? { x: xCombined[i], y: yCombined[i] } }
 
                     key={i}
-                    className="  bg-white/18 snap-center backdrop-blur-md p-[0.2rem] overflow-hidden relative lg:w-full md:w-[20rem] w-[80%] aspect-[1/1.6]  shrink-0 lg:shrink  rounded-[22px]"
+                    className="  bg-white/18 snap-center backdrop-blur-md md:p-[0.2rem] overflow-hidden relative lg:w-full md:w-[20rem] w-[80%] aspect-[1/1.3] md:aspect-[1/1.6]  shrink-0 lg:shrink  rounded-[40px] md:rounded-[22px]"
                   >
                     <div className="w-full h-full relative overflow-hidden rounded-[22px] ">
                       <Image
