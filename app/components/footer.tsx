@@ -1,11 +1,9 @@
 "use client";
-import footerImg from "@/public/landingPage/footerImg.webp";
-import SUUVO from "@/public/landingPage/SUUVO.webp";
+import footerImg from "@/public/landingPage/footer.webp";
 import Check from "@/public/landingPage/Check.png";
 import AppleLogo from "@/public/landingPage/AppleLogo.webp";
 import GooglePlayLogo from "@/public/landingPage/GooglePlayLogo.webp";
-import mobFooterBackground from "@/public/landingPage/mobFooterBackground.webp";
-import mobileTextBackground from "@/public/landingPage/mobileTextBackground.webp";
+import mobFooterBackground from "@/public/landingPage/mobileFooter.webp";
 import Image from "next/image";
 import logo from "@/public/landingPage/whiteLogo.webp";
 
@@ -22,7 +20,7 @@ const Footer = () => {
 
   return (
     <div
-      className={` overflow-clip pt-[5rem] md:gap-0 gap-[5rem]  bg-[#FFF8F6] flex flex-col relative w-full ${Sf_pro_medium.className}`}
+      className={` overflow-clip  pt-[5rem] md:gap-0 gap-[5rem]  bg-[#FFF8F6] flex flex-col relative w-full ${Sf_pro_medium.className}`}
     >
       {/* Modal Container */}
       <div className="w-full mx-auto md:w-[120rem] max-w-full  items-center gap-[0.15rem] flex flex-col z-[10]">
@@ -142,18 +140,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className=" flex justify-center  w-[120rem] max-w-full mx-auto items-center z-10">
-        <Image
-          src={SUUVO}
-          alt="footer image"
-          className="w-full h-fit hidden md:block  object-cover"
-        />{" "}
-        <Image
-          src={mobileTextBackground}
-          alt="footer image"
-          className="w-full h-fit md:hidden object-cover"
-        />{" "}
-      </div>
+      <div className="aspect-[1/0.45] md:aspect-[1/0.21]"></div>
+
       <div className=" absolute  w-full md:w-[120rem] max-w-full left-[50%] translate-x-[-50%] bottom-0">
         <Image
           src={footerImg}

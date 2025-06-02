@@ -137,7 +137,7 @@ const SomethingNewIsComing = () => {
           <div className="w-full lg:sticky top-0 lg:h-[100vh] left-0 ">
             <div
               ref={scrollRef}
-              className="flex w-full snap-mandatory snap-x overflow-x-auto  h-full items-center gap-[0.5rem] lg:gap-[1%] lg:px-0 md:px-[0.5rem] px-[0.5rem] "
+              className="flex w-full snap-mandatory snap-x lg:overflow-hidden overflow-x-auto  h-full items-center gap-[0.5rem] lg:gap-[1%] lg:px-0 md:px-[0.5rem] px-[0.5rem] "
             >
               {creators.map((e, i) => {
                 return (
