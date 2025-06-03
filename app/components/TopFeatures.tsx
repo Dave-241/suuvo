@@ -91,7 +91,7 @@ const Topfeatures = () => {
   return (
     <div className=" w-full flex flex-col items-center  z-[10]">
       <h2
-        className={`${Sf_pro_bold.className} text-black sticky top-[30%] md:mb-0 mb-[3rem] md:top-[50%] md:translate-y-[-50%] text-center md:text-[150px] text-6xl md:leading-[88%]`}
+        className={`${Sf_pro_bold.className} text-black sticky top-[50%] md:mb-0 mb-[3rem] md:top-[50%] translate-y-[-50%] text-center md:text-[150px] text-6xl md:leading-[88%]`}
       >
         Our top <br /> features
       </h2>
@@ -137,7 +137,7 @@ const Topfeatures = () => {
                   <p className={`${Sf_pro_regular.className} `}>{e.subtitle}</p>
                 </div>
               </div>
-              <div className="w-full md:rounded-[30px] rounded-[22px] overflow-hidden aspect-[1/1] ">
+              <div className="w-full md:rounded-[30px] rounded-[22px] overflow-hidden aspect-[1/0.8] ">
                 <Image
                   src={e.image}
                   alt="feature"

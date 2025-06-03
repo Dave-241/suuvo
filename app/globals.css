@@ -19,3 +19,11 @@ body {
 .scroll-hidden::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+.gradient {
+  /* font-size: 72px; */
+  background: -webkit-linear-gradient(#dfdddd, rgb(97, 96, 96));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

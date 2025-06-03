@@ -96,7 +96,7 @@ const Hero = () => {
   const translateY = useTransform(
     scrollYProgress,
     [0, 0.3, 0.45, 1],
-    [-75, -50, -40, -50]
+    [-70, -50, -40, -50]
   );
   const translateBodY = useTransform(
     scrollYProgress,
@@ -106,7 +106,7 @@ const Hero = () => {
   const scale = useTransform(
     scrollYProgress,
     [0, 0.35, 0.45, 1],
-    [1, 1.17, 1.17, 0.97]
+    [1, 1.17, 1.17, 0.8]
   );
   const top = useTransform(scrollYProgress, [0, 1], [50, 50]);
 
@@ -135,8 +135,8 @@ const Hero = () => {
               fill
               className="object-cover"
             />
-            <div className=" w-full   absolute bottom-[-25%] h-[60%]  bg-white backdrop-blur-md blur-[200px]">
-              <div className="h-[20%] absolute bottom-[-30%] w-full   blur-2xl bg-white"></div>
+            <div className=" w-full   absolute bottom-0 md:bottom-[-25%] md:h-[60%] h-[40%]  bg-white backdrop-blur-md blur-[200px]">
+              <div className="md:h-[20%] h-full  absolute bottom-[-30%] w-full   blur-2xl bg-white"></div>
             </div>
           </div>
           <div className="w-full h-full  blur-[90px] md:blur-[150px]   bg-[#DDE5FE] rounded-b-full"></div>
@@ -358,9 +358,9 @@ const Hero = () => {
           </div>
 
           {/* insert it here  */}
-          <div className=" border2 sticky top-[50%] translate-y-[-50%] md:mb-[5rem] mb-[3rem] w-full z-[10]">
+          <div className=" mb-[-20%] md:hidden sticky top-[50%] translate-y-[-50%] md:mb-[5rem] mt-[40%] w-full z-[10]">
             <h2
-              className={`text-6xl border2 ${Sf_pro_bold.className} text-black text-center z-[10]`}
+              className={` gradient text-[20vw] leading-[90%]  ${Sf_pro_bold.className} text-white text-center z-[10] [mask-image:radial-gradient(ellipse_at_center,white_100%,transparent_100%)][mask-size:100%_100%] [mask-repeat:no-repeat]`}
             >
               What <br /> Makes <br /> SUUVO <br /> Unique?
             </h2>
@@ -399,7 +399,13 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="w-full md:block hidden "></div>
+            <div className="w-full  justify-center items-center md:flex hidden ">
+              <h2
+                className={`lg:text-[140px] md:text-[100px] leading-[90%] text-center  text-white z-[10] ${Sf_pro_bold.className} [mask-image:radial-gradient(ellipse_at_center,white_100%,transparent_100%)] [mask-size:100%_100%] [mask-repeat:no-repeat]`}
+              >
+                What <br /> Makes <br /> SUUVO <br /> Unique?
+              </h2>
+            </div>
             <div className="w-full lg:pr-[5%] md:items-start items-center  flex flex-col gap-[1.5rem] md:gap-[3rem] ">
               {featureCardsTwo.map((card, index) => (
                 <div
