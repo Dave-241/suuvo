@@ -173,7 +173,7 @@ const SomethingNewIsComing = () => {
                           {e.followers} followers
                         </p>
                       </div>
-                      <div className=" h-[50%]  items-end justify-between flex p-[5%] w-full bg-gradient-to-b to-black z-[10] absolute bottom-0">
+                      <div className=" h-[50%]  p-[8%]  items-end justify-between flex md:p-[5%] w-full bg-gradient-to-b to-black z-[10] absolute bottom-0">
                         <div className="flex gap-2  items-center">
                           <div
                             className={`rounded-[100%]  aspect-square overflow-hidden md:w-[20%] lg:w-[40%] ${Sf_pro_regular.className}`}

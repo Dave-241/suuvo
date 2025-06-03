@@ -62,7 +62,7 @@ const PhoneBanner = () => {
     <>
       <div
         ref={ref}
-        className=" mb-[5rem] mx-auto md:max-w-full  w-full md:w-[120rem]  min-h-[100vh]     rounded-[40px] mt-[5rem]  justify-center relative overflow-hidden flex"
+        className=" mb-[5rem] mx-auto md:max-w-full  w-full md:w-[120rem]  min-h-[100vh]     rounded-[40px] mt-[5rem]  items-center justify-center relative overflow-hidden flex"
       >
         <div
           ref={img_scale}
@@ -82,7 +82,7 @@ const PhoneBanner = () => {
               alt=""
               className=" absolute w-[85%] md:w-[60%]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] "
             />
-            <div className="md:w-[13rem] w-[70%] mx-auto relative md:max-w-[50%]">
+            <div className="md:w-[13rem] w-[55%] mx-auto relative md:max-w-[50%]">
               <Image src={img} alt="" className=" w-full" />
             </div>
           </div>

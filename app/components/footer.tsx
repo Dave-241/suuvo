@@ -73,7 +73,7 @@ const Footer = () => {
               <span className="text-lg opacity-[50%] ">Coming soon</span>
             </div>
             <div
-              className={` ${Sf_pro_medium.className} flex text-xs md:flex-row flex-col items-center md:text-base `}
+              className={` ${Sf_pro_medium.className} flex text-xs md:flex-row  justify-between md:justify-start items-center md:text-base `}
             >
               <a href="mailto:info@suuvo.com">info@suuvo.com </a>{" "}
               <span className=" hidden md:block">&nbsp; | &nbsp; </span>

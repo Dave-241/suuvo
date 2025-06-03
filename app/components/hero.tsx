@@ -12,6 +12,8 @@ import fullbodyopt from "@/public/landingPage/fullbodyopt.webp";
 import livestreaming from "@/public/landingPage/livestreaming.webp";
 import unlimitedMonetization from "@/public/landingPage/unlimitedMonetization.webp";
 import interactiveCasualGames from "@/public/landingPage/interactiveCasualGames.webp";
+import mobHeroONe from "@/public/landingPage/mobHeroONe.webp";
+import mobHeroTwo from "@/public/landingPage/mobHeroTwo.webp";
 
 import {
   motion,
@@ -127,7 +129,7 @@ const Hero = () => {
   return (
     <>
       <div className=" relative overflow-x-clip w-full">
-        <div className=" absolute top-0  flex gap-[2rem]  translate-x-[-50%] left-[50%] h-full  w-[100%]">
+        <div className=" absolute top-0  flex md:gap-[2rem] gap-[1.5rem]  translate-x-[-50%] left-[50%] h-full  w-[100%]">
           <div className="  w-full absolute z-[10] h-[50%]">
             <Image
               src={background}
@@ -147,8 +149,30 @@ const Hero = () => {
           className="md:w-[120rem] md:mb-[20rem] mb-[14rem] md:max-w-full mx-auto   items-center flex flex-col pt-[10rem] relative "
         >
           <div
-            className={` z-[10] items-center flex flex-col gap-[1rem] md:gap-[1.5rem] text-center ${Sf_pro_medium.className}`}
+            className={` z-[10] md:pt-0 pt-[5rem] items-center relative flex flex-col gap-[1.5rem] md:gap-[1.5rem] text-center ${Sf_pro_medium.className}`}
           >
+            <Image
+              style={{
+                transition: ` 0.4s ease-out`,
+                opacity: startAnime ? 1 : 0,
+              }}
+              src={mobHeroONe}
+              alt="mobHeroONe"
+              className={`w-[43%] ${
+                !startAnime ? "" : "rotate-[-27deg]"
+              }  z-[20] absolute left-[-18%] top-[0.4rem]  md:hidden`}
+            />
+            <Image
+              style={{
+                transition: ` 0.4s ease-out`,
+                opacity: startAnime ? 1 : 0,
+              }}
+              src={mobHeroTwo}
+              alt="mobHeroTwo"
+              className={`w-[33%] ${
+                !startAnime ? "" : "rotate-[20deg]"
+              }   absolute right-[-10%] top-[0.4rem]  md:hidden`}
+            />
             <h1
               style={{
                 transition: ` 0.4s ease-out`,
