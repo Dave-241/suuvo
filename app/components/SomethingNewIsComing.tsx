@@ -122,18 +122,18 @@ const SomethingNewIsComing = () => {
   }, [scrollRef]);
   return (
     <>
-      <div className="w-full  items-center mt-[7rem] md:w-[120rem] max-w-full lg:max-w-[95%] mx-auto ">
-        <div className="flex-col  mb-[2rem] items-center lg:mb-[-20vh] flex gap-5 md:gap-8">
+      <div className="w-full flex flex-col items-center mt-[7rem] md:w-[120rem] max-w-full lg:max-w-[95%] mx-auto ">
+        <div className="flex-col  z-[10]  mb-[2.5rem] items-center lg:mb-[-18vh] flex gap-5 md:gap-8">
           {" "}
           <h2
-            className={`${Sf_pro_bold.className} text-center text-black/20 text-[60px] leading-[80%] md:text-[130px] md:leading-[75%]`}
+            className={`${Sf_pro_bold.className} text-center  text-[60px] leading-[80%] md:text-[130px] md:leading-[75%]`}
           >
             Something <br /> new is <br /> coming
           </h2>
           <ButtonCtn />
         </div>
 
-        <div className="lg:h-[150vh] w-full relative" ref={ref}>
+        <div className="lg:h-[150vh]  w-full relative" ref={ref}>
           <div className="w-full lg:sticky top-0 lg:h-[100vh] left-0 ">
             <div
               ref={scrollRef}

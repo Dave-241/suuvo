@@ -91,7 +91,7 @@ const Topfeatures = () => {
   return (
     <div className=" w-full flex flex-col items-center  z-[10]">
       <h2
-        className={`${Sf_pro_bold.className} text-black/20 sticky top-[30%] md:mb-0 mb-[3rem] md:top-[50%] md:translate-y-[-50%] text-center md:text-[150px] text-6xl md:leading-[88%]`}
+        className={`${Sf_pro_bold.className} text-black sticky top-[30%] md:mb-0 mb-[3rem] md:top-[50%] md:translate-y-[-50%] text-center md:text-[150px] text-6xl md:leading-[88%]`}
       >
         Our top <br /> features
       </h2>
@@ -149,7 +149,7 @@ const Topfeatures = () => {
         })}
         <div className="md:w-[25rem] w-[80%] shrink-0 "></div>
       </div>
-      <div className="flex lef justify-center translate-y-[-50%] z-[100] max-w-[90%] rounded-full p-[0.3rem] text-white  gap-[2rem]  ">
+      <div className="flex lef justify-center mt-[2rem]  z-[100] max-w-[90%] rounded-full p-[0.3rem] text-white  gap-[2rem]  ">
         <button
           onClick={() => scrollByCard("prev")}
           className=" text-xl w-[3.2rem] aspect-square  rounded-full bg-[#E21179]/70 backdrop-blur-md cursor-pointer   hover:bg-[#E21179] "

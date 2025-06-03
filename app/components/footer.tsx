@@ -72,6 +72,21 @@ const Footer = () => {
               </div>
               <span className="text-lg opacity-[50%] ">Coming soon</span>
             </div>
+            <div
+              className={` ${Sf_pro_medium.className} flex text-xs md:flex-row flex-col items-center md:text-base `}
+            >
+              <a href="mailto:info@suuvo.com">info@suuvo.com </a>{" "}
+              <span className=" hidden md:block">&nbsp; | &nbsp; </span>
+              <p>
+                Designed & Developed by{" "}
+                <Link
+                  href={"http://malkain.com/"}
+                  className="underline opacity-50 underline-offset-4"
+                >
+                  Malkain Designs
+                </Link>
+              </p>
+            </div>
           </div>
 
           {/* Right Section: Form */}
@@ -114,10 +129,12 @@ const Footer = () => {
 
               <div className="flex justify-center w-full ">
                 <button
-                  className={` bg-[#F3A21B] w-fit  capitalize ${Sf_pro_bold.className} md:rounded-full max-w-full px-[3.5rem] py-[0.8rem] rounded-[17px] md:px-[5rem] text-lg mt-2 md:py-[1rem] text-[#3C1702]`}
-                  style={{
-                    boxShadow: "inset 0px -6.06px 4.85px #FFC769", // ✅ fixed the syntax
-                  }}
+                  className={` bg-[#F3A21B] w-fit  capitalize ${Sf_pro_bold.className} md:rounded-full max-w-full px-[3.5rem] py-[0.8rem] rounded-[17px] md:px-[5rem] text-lg mt-2 md:py-[1rem] cursor-pointer hover:opacity-80 text-[#3C1702]`}
+                  style={
+                    {
+                      // boxShadow: "inset 0px -6.06px 4.85px #FFC769", // ✅ fixed the syntax
+                    }
+                  }
                 >
                   Submit
                 </button>
@@ -127,7 +144,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Branding (Logo and text) */}
-        <div className="relative   backdrop-blur-[70px] flex items-center justify-between w-full  rounded-full z-20 max-w-[97%] pl-5  bg-[#FFFFFF]/80 p-4 text-center text-sm  ">
+        {/* <div className="relative   backdrop-blur-[70px] flex items-center justify-between w-full  rounded-full z-20 max-w-[97%] pl-5  bg-[#FFFFFF]/80 p-4 text-center text-sm  ">
           <Image src={logo} alt="logo" className="w-[8rem] " />
           <div className=" flex text-xs md:flex-row flex-col items-center md:text-base">
             <a href="mailto:info@suuvo.com">info@suuvo.com </a>{" "}
@@ -137,7 +154,7 @@ const Footer = () => {
               Designed & Developed by malkain designs{" "}
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="aspect-[1/0.3] md:aspect-[1/0.21]"></div>

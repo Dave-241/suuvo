@@ -68,7 +68,7 @@ const PhoneBanner = () => {
           ref={img_scale}
           className=" absolute bg-[#FFC6E2] w-full md:w-[25rem] rounded-[20px] overflow-hidden h-full"
         ></div>
-        <div className="flex flex-col w-full items-center py-[3rem] md:py-[5rem] z-[10] text-center gap-[2rem]">
+        <div className="flex flex-col w-full items-center py-[3rem] md:py-[5rem] z-[10] text-center gap-[1.5rem]">
           <h2
             className={`${Sf_pro_bold.className} text-[#5F002F] text-lg md:text-2xl`}
           >
@@ -76,13 +76,13 @@ const PhoneBanner = () => {
             future of digital interaction!
           </h2>
 
-          <div className="md:w-[50rem]  w-full relative flex items-center  md:max-w-[87%]">
+          <div className="md:w-[50rem]   w-full relative flex items-center  md:max-w-[87%]">
             <Image
               src={lines}
               alt=""
-              className=" absolute w-[85%] top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] "
+              className=" absolute w-[85%] md:w-[60%]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] "
             />
-            <div className="md:w-[20rem] w-[70%] mx-auto relative md:max-w-[50%]">
+            <div className="md:w-[13rem] w-[70%] mx-auto relative md:max-w-[50%]">
               <Image src={img} alt="" className=" w-full" />
             </div>
           </div>
@@ -121,7 +121,7 @@ const PhoneBanner = () => {
               Auto racing
             </button>
           </div> */}
-          <div className="relative flex w-[15rem] bg-[#FFFFFF]/40 rounded-full p-1">
+          <div className="relative  flex w-[15rem] bg-[#FFFFFF]/40 rounded-full p-1">
             {/* Sliding background pill */}
             <div
               className="absolute top-1 left-1 h-[85%] w-1/2 bg-[#E21179] rounded-full z-0 transition-all duration-500 ease-in-out"

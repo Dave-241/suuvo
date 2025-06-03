@@ -147,7 +147,7 @@ const Hero = () => {
           className="md:w-[120rem] md:mb-[20rem] mb-[14rem] md:max-w-full mx-auto   items-center flex flex-col pt-[10rem] relative "
         >
           <div
-            className={` z-[10] items-center flex flex-col gap-[1rem] text-center ${Sf_pro_medium.className}`}
+            className={` z-[10] items-center flex flex-col gap-[1rem] md:gap-[1.5rem] text-center ${Sf_pro_medium.className}`}
           >
             <h1
               style={{
@@ -157,7 +157,7 @@ const Hero = () => {
                   startAnime ? (startSecondAnime ? 0 : 10) : -70
                 }%)`, // ← just
               }}
-              className={`text-center text-[45px] leading-[120%] md:text-[80px] md:leading-[120%] z-[10]  `}
+              className={`text-center text-[45px] leading-[120%] md:text-[75px] md:leading-[110%] z-[10]  `}
             >
               The Future of <br /> Social Media
             </h1>
@@ -358,6 +358,13 @@ const Hero = () => {
           </div>
 
           {/* insert it here  */}
+          <div className=" border2 sticky top-[50%] translate-y-[-50%] md:mb-[5rem] mb-[3rem] w-full z-[10]">
+            <h2
+              className={`text-6xl border2 ${Sf_pro_bold.className} text-black text-center z-[10]`}
+            >
+              What <br /> Makes <br /> SUUVO <br /> Unique?
+            </h2>
+          </div>
           <div className=" w-full grid md:grid-cols-3 z-[10] md:max-w-[95%]  md:gap-0 gap-[1.5rem] mx-auto md:mt-[5rem]">
             <div className="w-full lg:pl-[5%] items-center md:items-end  flex flex-col md:gap-[3rem] gap-[1.5rem] ">
               {featureCards.map((card, index) => (
