@@ -6,6 +6,7 @@ import ai from "@/public/landingPage/ai.webp";
 import gamification from "@/public/landingPage/gamification.webp";
 import sports from "@/public/landingPage/sports.webp";
 import education from "@/public/landingPage/education.webp";
+import shops from "@/public/landingPage/shops.webp";
 
 import fullbodythumb from "@/public/landingPage/fullbodythumb.webp";
 import aithumb from "@/public/landingPage/aithumb.webp";
@@ -22,7 +23,7 @@ const Topfeatures = () => {
     {
       title: "Full body filters",
       subtitle:
-        "Let AI do the magic—auto-enhance your photos and videos in seconds. Sharpen details, boost colors, and perfect your content with just one tap.",
+        "Transform your look in a tap. Apply AI-powered filters that style your entire body seamlessly and instantly, so every photo feels uniquely you.",
       tags: ["Filter", "Images"],
       image: fullbody,
       thumbnail: fullbodythumb,
@@ -32,7 +33,7 @@ const Topfeatures = () => {
     {
       title: "AI Auto enhance features",
       subtitle:
-        "Let AI do the magic—auto-enhance your photos and videos in seconds. Sharpen details, boost colors, and perfect your content with just one tap.",
+        "Let AI do the magic auto enhance your photos and videos in seconds. Sharpen details, boost colors, and perfect your content with just one tap.",
       tags: ["AI", "Enhance"],
       image: ai,
       thumbnail: aithumb,
@@ -62,12 +63,22 @@ const Topfeatures = () => {
     {
       title: "Education integration",
       subtitle:
-        "Learning just got easier. Access educational content, join study communities, and explore interactive tools—all seamlessly integrated into your daily flow.",
+        "Learning just got easier. Access educational content, join study communities, and explore interactive tools all seamlessly integrated into your daily flow.",
       tags: ["Learn", "Educate"],
       image: education,
       thumbnail: educationthumb,
       bg: "#C3C1FF",
       text: "#03006A",
+    },
+    {
+      title: " SUUVO Shops",
+      subtitle:
+        "Discover a new way to shop directly from your favorite creators. Explore curated drops, exclusive merch, and social storefronts without leaving the app.",
+      tags: ["Shop", "Creators"],
+      image: shops,
+      thumbnail: fullbodythumb,
+      bg: "#FFC6E2",
+      text: "#50072B",
     },
   ];
   const scrollByCard = (direction: any) => {
@@ -149,7 +160,7 @@ const Topfeatures = () => {
         })}
         <div className="md:w-[25rem] w-[80%] shrink-0 "></div>
       </div>
-      <div className="flex lef justify-center mt-[2rem]  z-[100] max-w-[90%] rounded-full p-[0.3rem] text-white  gap-[2rem]  ">
+      <div className="flex lef justify-center mt-[2rem]  z-[50] max-w-[90%] rounded-full p-[0.3rem] text-white  gap-[2rem]  ">
         <button
           onClick={() => scrollByCard("prev")}
           className=" text-xl w-[3.2rem] aspect-square  rounded-full bg-[#E21179]/70 backdrop-blur-md cursor-pointer   hover:bg-[#E21179] "

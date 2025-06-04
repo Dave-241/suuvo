@@ -10,6 +10,8 @@ import logo from "@/public/landingPage/whiteLogo.webp";
 import { Sf_pro_bold, Sf_pro_medium } from "../utils/font";
 import Link from "next/link";
 import ButtonCtn from "./button";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
   const benefits = [
@@ -17,6 +19,79 @@ const Footer = () => {
     "Exclusive Welcome Gifts just for you",
     "Priority Access to new feature",
   ];
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [feedback, setFeedback] = useState("");
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    location: "", // 🆕 added location
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Optional: basic frontend validation
+    if (!formData.name || !formData.email) {
+      setStatus("error");
+      setFeedback("Please fill in your name and email.");
+      return;
+    }
+
+    try {
+      setStatus("loading");
+      setFeedback(""); // Clear any previous message
+
+      const res = await axios.post("/api/subscribe", {
+        email: formData.email,
+        name: formData.name,
+        phone: formData.phone,
+        location: formData.location, // ✅ add this
+      });
+
+      if (res.data.success) {
+        setStatus("success");
+        setFeedback(" You’ve successfully subscribed to SUUVO updates!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          location: "",
+        });
+      } else {
+        setStatus("error");
+        setFeedback(
+          res.data.message || "Subscription failed. Please try again."
+        );
+      }
+    } catch (err: any) {
+      setStatus("error");
+      setFeedback(
+        err?.response?.data?.message ||
+          "Something went wrong. Please try again."
+      );
+    }
+  };
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        const locationString = `${data.city}, ${data.region}, ${data.country_name}`;
+        setFormData((prev) => ({ ...prev, location: locationString }));
+      } catch (error) {
+        console.warn("Failed to fetch location");
+      }
+    };
+
+    fetchLocation();
+  }, []);
 
   return (
     <div
@@ -107,36 +182,112 @@ const Footer = () => {
                 type="text"
                 autoComplete="name"
                 placeholder="Full name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className="bg-[#000000]/5 rounded-[12px] h-[3.5rem] md:h-[4rem] px-5 border-black/0 border focus:border-black/30 transition duration-300 outline-none"
               />
               <input
                 type="tel"
                 autoComplete="tel"
                 placeholder="Phone number"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
                 className="bg-[#000000]/5 rounded-[12px] h-[3.5rem] md:h-[4rem] px-5 border-black/0 border focus:border-black/30 transition duration-300 outline-none"
               />
               <input
                 type="email"
                 placeholder="Email address"
                 autoComplete="email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className="bg-[#000000]/5 rounded-[12px] h-[3.5rem] md:h-[4rem] px-5 border-black/0 border focus:border-black/30 transition duration-300 outline-none"
               />
-              <textarea
-                rows={3}
-                placeholder="Enter message"
-                className="bg-[#000000]/5 rounded-[12px] h-[7rem] md:h-[7rem] p-5 border-black/0 border focus:border-black/30 transition duration-300 outline-none"
-              />
+              {feedback && status !== "idle" && (
+                <div
+                  className={`flex items-center gap-2 text-sm md:text-base px-4 py-3 rounded-md transition-all duration-300 ${
+                    status === "success"
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }`}
+                >
+                  {status === "success" ? (
+                    <svg
+                      className="w-5 h-5 shrink-0 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-5 h-5 shrink-0 text-red-600"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  )}
+                  <span>{feedback}</span>
+                </div>
+              )}
 
               <div className="flex justify-center w-full ">
                 <button
-                  className={` bg-[#F3A21B] w-fit  capitalize ${Sf_pro_bold.className} md:rounded-full max-w-full px-[3.5rem] py-[0.8rem] rounded-[17px] md:px-[5rem] text-lg mt-2 md:py-[1rem] cursor-pointer hover:opacity-80 text-[#3C1702]`}
-                  style={
-                    {
-                      // boxShadow: "inset 0px -6.06px 4.85px #FFC769", // ✅ fixed the syntax
-                    }
-                  }
+                  onClick={handleSubmit}
+                  disabled={status === "loading"}
+                  className={`bg-[#F3A21B] flex items-center justify-center gap-2 w-fit capitalize ${
+                    Sf_pro_bold.className
+                  } md:rounded-full max-w-full px-[3.5rem] py-[0.8rem] rounded-[17px] md:px-[5rem] text-lg mt-2 md:py-[1rem] cursor-pointer ${
+                    status === "loading"
+                      ? "opacity-60 cursor-not-allowed"
+                      : "hover:opacity-80"
+                  } text-[#3C1702]`}
                 >
-                  Submit
+                  {status === "loading" ? (
+                    <span className="flex items-center gap-2">
+                      <svg
+                        className="animate-spin h-5 w-5 text-[#3C1702]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                        />
+                      </svg>
+                      Submitting...
+                    </span>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </div>
             </div>

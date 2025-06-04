@@ -10,7 +10,7 @@ import { Sf_pro_bold, Sf_pro_medium } from "../utils/font";
 import ButtonCtn from "./button";
 import fullbodyopt from "@/public/landingPage/fullbodyopt.webp";
 import livestreaming from "@/public/landingPage/livestreaming.webp";
-import unlimitedMonetization from "@/public/landingPage/unlimitedMonetization.webp";
+import videoCalling from "@/public/landingPage/videoCalling.webp";
 import interactiveCasualGames from "@/public/landingPage/interactiveCasualGames.webp";
 import mobHeroONe from "@/public/landingPage/mobHeroONe.webp";
 import mobHeroTwo from "@/public/landingPage/mobHeroTwo.webp";
@@ -39,18 +39,18 @@ const Hero = () => {
         { text: " Filters", bold: false },
       ],
       description:
-        "Express yourself like never before—with every picture make it uniquely yours.",
+        "Express yourself like never before with every picture make it uniquely yours.",
       image: fullbodyopt,
     },
 
     {
       title: [
-        { text: "Unlimited", bold: true },
-        { text: " monetization", bold: false },
+        { text: "Video", bold: true },
+        { text: " Calling", bold: false },
       ],
       description:
-        "Dive into a social experience where the marketplace meets your feed. Discover shops from creators you follow.",
-      image: unlimitedMonetization,
+        "Connect face-to-face with friends, fans, or your community. Enjoy real-time video chats that feel personal right inside the app.",
+      image: videoCalling,
     },
   ];
   const featureCardsTwo = [
@@ -70,7 +70,7 @@ const Hero = () => {
         { text: " Games", bold: true },
       ],
       description:
-        "Take a break and dive into fun! Enjoy light, interactive games you can play solo or with friends—right inside the app.",
+        "Take a break and dive into fun! Enjoy light, interactive games you can play solo or with friends right inside the app.",
       image: interactiveCasualGames,
     },
   ];
@@ -149,9 +149,9 @@ const Hero = () => {
           className="md:w-[120rem] md:mb-[20rem] mb-[14rem] md:max-w-full mx-auto   items-center flex flex-col pt-[10rem] relative "
         >
           <div
-            className={` z-[10] md:pt-0 pt-[5rem] items-center relative flex flex-col gap-[1.5rem] md:gap-[1.5rem] text-center ${Sf_pro_medium.className}`}
+            className={` z-[10] md:pt-0 pt-[0rem] items-center relative flex flex-col gap-[1.5rem] md:gap-[1.5rem] text-center ${Sf_pro_medium.className}`}
           >
-            <Image
+            {/* <Image
               style={{
                 transition: ` 0.4s ease-out`,
                 opacity: startAnime ? 1 : 0,
@@ -161,18 +161,18 @@ const Hero = () => {
               className={`w-[43%] ${
                 !startAnime ? "" : "rotate-[-27deg]"
               }  z-[20] absolute left-[-18%] top-[0.4rem]  md:hidden`}
-            />
-            <Image
+            /> */}
+            {/* <Image
               style={{
                 transition: ` 0.4s ease-out`,
                 opacity: startAnime ? 1 : 0,
               }}
               src={mobHeroTwo}
               alt="mobHeroTwo"
-              className={`w-[33%] ${
+              className={`w-[50%] ${
                 !startAnime ? "" : "rotate-[20deg]"
-              }   absolute right-[-10%] top-[0.4rem]  md:hidden`}
-            />
+              }   absolute right-[-10%] top-[-2rem]  md:hidden`}
+            /> */}
             <h1
               style={{
                 transition: ` 0.4s ease-out`,
@@ -369,7 +369,8 @@ const Hero = () => {
                   >
                     One app, with endless opportunities, an app that lets <br />{" "}
                     you connect with
-                    <span className="text-black"> friends globally </span>
+                    <span className="text-black"> friends globally</span> and
+                    also <span className="text-black"> play games </span>
                   </p>
                 </div>
               </div>
